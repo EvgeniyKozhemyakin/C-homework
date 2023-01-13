@@ -6,7 +6,7 @@
 Console.Write("Введите положительное число : ");
 
 int number = Convert.ToInt32(Console.ReadLine());
-string numberFirst = ""; 
+string numberFirst = "";
 int localNum = number % 2 == 0 ? number : number - 1;
 
 if (localNum >= 1)
@@ -18,12 +18,11 @@ if (localNum >= 1)
         {
             numberFirst += ",";
         }
-        i != localNum ? numberFirst += "," : null;
     }
     Console.Write($"{numberFirst}");
 }
 else
 {
-    Console.Write("Вы ввели отрицательное число. Введите положительное число : ");
+    Console.Write("Вы ввели отрицательное число или 1. Введите положительное число больше 1 : ");
 }
 
