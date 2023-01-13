@@ -4,34 +4,26 @@
 // 8 -> 2, 4, 6, 8
 
 Console.Write("Введите положительное число : ");
-int number = Convert.ToInt32(Console.ReadLine()); // 3 10
-int numberFirst = number - (number - 1); // 1 10 - 9 = 1
 
-if (number > 1)
+int number = Convert.ToInt32(Console.ReadLine());
+string numberFirst = ""; // 1 10 - 9 = 1
+int localNum = number % 2 == 0 ? number : number - 1;
+
+if (localNum >= 1)
 {
-    for (int i = 0; i < number; i++)
+    for (int i = 2; i <= localNum; i += 2)
     {
-        if (numberFirst % 2 == 0)
+        numberFirst += Convert.ToString(i);
+        if (i != localNum)
         {
-            if (numberFirst == 2)
-            {
-                Console.Write($"{numberFirst}");
-                numberFirst++;
-            }
-            else
-            {
-                Console.Write($", {numberFirst}");
-                numberFirst++;
-            }
+            numberFirst += ",";
         }
-        else
-        {
-            numberFirst++;
-        }
-
+        i != localNum ? numberFirst += "," : null;
     }
-} else
+    Console.Write($"{numberFirst}");
+}
+else
 {
-    Console.Write("Вы ввели отрицательное число. Введите положительное число : ");   
+    Console.Write("Вы ввели отрицательное число. Введите положительное число : ");
 }
 
