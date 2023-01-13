@@ -6,7 +6,7 @@
 Console.Write("Введите положительное число : ");
 
 int number = Convert.ToInt32(Console.ReadLine());
-string numberFirst = ""; // 1 10 - 9 = 1
+string numberFirst = ""; 
 int localNum = number % 2 == 0 ? number : number - 1;
 
 if (localNum >= 1)
