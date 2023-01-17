@@ -12,6 +12,3 @@ Console.WriteLine($"Квадрат числа {number} равен {square}");
 
 
 
-
-
-
