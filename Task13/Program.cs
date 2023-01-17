@@ -18,10 +18,7 @@ string ReturnThird(int num)
 
 Console.WriteLine("Введите число :");
 
-int number = Convert.ToInt32(Console.ReadLine());
-
-if (number < 0) number *= -1;
-
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 string thirdNumb = ReturnThird(number);
 
 Console.WriteLine(thirdNumb);

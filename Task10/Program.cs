@@ -10,11 +10,9 @@ int ThreeAverage(int num)
 }
 
 Console.WriteLine("Введите трехзначное число:");
-int number = Convert.ToInt32(Console.ReadLine());
-
-if (number < 0) number = -number;
-
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int result = ThreeAverage(number);
 
 Console.WriteLine(number < 1000 && number > 99 ? result : "Вы ввели не трехзначное число.");
+
 
