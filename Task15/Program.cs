@@ -7,8 +7,7 @@
 
 bool Holiday(int num)
 {
-    if (num == 6 || num == 7) return true;
-    return false;
+    return num == 6 || num == 7;
 }
 
 Console.WriteLine("Введите число от 1 до 7 :");
