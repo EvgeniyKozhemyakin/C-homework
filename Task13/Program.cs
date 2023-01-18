@@ -5,23 +5,30 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-string ReturnThird(int num)
+int ThirdNumber(int num)
 {
-    while (num / 100 >= 10)
-    {
-        num = num / 10;
-    }
 
-    if (num < 100) return "третьей цифры нет";
-    return (num % 10).ToString();
+    if (num > 99)
+    {
+        while (num / 100 >= 10)
+        {
+            num = num / 10;
+        }
+        return num % 10;
+    }
+    else return -1;
 }
 
 Console.WriteLine("Введите число :");
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
-string thirdNumb = ReturnThird(number);
+int thirdNumb = ThirdNumber(number);
 
-Console.WriteLine(thirdNumb);
+if (number < 100)
+{
+    Console.WriteLine("третьей цифры нет");
+}
+else Console.WriteLine(thirdNumb);
 
 
 
