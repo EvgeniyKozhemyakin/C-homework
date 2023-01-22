@@ -23,4 +23,3 @@ if (number < 1)
 Square(number);
 
 
-
