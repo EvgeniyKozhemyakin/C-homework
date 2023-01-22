@@ -11,12 +11,12 @@ void Cube(int num)
     }
 }
 
-Console.WriteLine("Введите число");
+Console.Write("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 0) 
+if (number < 1) 
 {
-    Console.WriteLine("Некорректный ввод");
+    Console.WriteLine("Некорректный ввод!");
     return;
 }
 Cube(number);
