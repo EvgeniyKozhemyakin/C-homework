@@ -19,10 +19,12 @@ int[] GenerateArray(int size, int min, int max)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
+    Console.Write($"[{arr[0]}, ");
+    for (int i = 1; i < arr.Length - 1; i++)
     {
-        Console.Write($"{arr[i]} ");
+        Console.Write($"{arr[i]}, ");
     }
+    Console.Write($"{arr[arr.Length - 1]}]");
 }
 int SumUnevenElement(int[] arr)
 {
@@ -39,5 +41,5 @@ int[] array = GenerateArray(4, -100, 100);
 int sumUnevenElements = SumUnevenElement(array);
 
 PrintArray(array);
-Console.WriteLine($" ->  {sumUnevenElements}");
+Console.WriteLine($" -> Сумма нечетных = {sumUnevenElements}");
 

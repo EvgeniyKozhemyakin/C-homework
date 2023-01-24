@@ -13,10 +13,12 @@ int[] GenerateArray(int size, int min, int max)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
+    Console.Write($"[{arr[0]}, ");
+    for (int i = 1; i < arr.Length - 1; i++)
     {
-        Console.Write($"{arr[i]} ");
+        Console.Write($"{arr[i]}, ");
     }
+    Console.Write($"{arr[arr.Length - 1]}]");
 }
 int MaxElementsArray(int[] arr)
 {
@@ -43,7 +45,7 @@ int minElements = MinElementsArray(array);
 int diffBetweenMaxMin = maxElements - minElements ;
 
 PrintArray(array);
-Console.Write($"--> {diffBetweenMaxMin}");
+Console.Write($" -> Разница между макс и мин = {diffBetweenMaxMin}");
 
 
 

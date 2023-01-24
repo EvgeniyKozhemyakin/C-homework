@@ -13,7 +13,7 @@ int[] GenerateArray(int size, int min, int max)
     }
     return arr;
 }
-int EvenNumArray (int[] arr)
+int NumberOfEvenNumArray(int[] arr)
 {
     int evenNum = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -27,14 +27,16 @@ int EvenNumArray (int[] arr)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
+    Console.Write($"[{arr[0]}, ");
+    for (int i = 1; i < arr.Length - 1; i++)
     {
-        Console.Write($"{arr[i]} " );
+        Console.Write($"{arr[i]}, ");
     }
+    Console.Write($"{arr[arr.Length - 1]}]");
 }
 
-int[] array = GenerateArray(8, 100, 999);
-int evenNumber =EvenNumArray(array);
+int[] array = GenerateArray(4, 100, 999);
+int numberOfEvenNumbers = NumberOfEvenNumArray(array);
 
 PrintArray(array);
-Console.Write(evenNumber);
+Console.Write($" -> {numberOfEvenNumbers}");
