@@ -3,11 +3,10 @@
 // 82 -> 10
 // 9012 -> 12
 
-int SumNumber(int num)
+int SumDigits(int num)
 {
-    if (num < 0) num = num * -1;
-
     int sum = 0;
+    if (num < 0) num *= -1;
     for (int i = 0; i <= num; i++)
     {
         sum += num % 10;
@@ -19,5 +18,5 @@ int SumNumber(int num)
 Console.Write("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int sumNumber = SumNumber(number);
+int sumNumber = SumDigits(number);
 Console.WriteLine($"Сумма цифр числа {number} = {sumNumber}");
