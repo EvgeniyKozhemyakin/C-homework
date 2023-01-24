@@ -2,7 +2,7 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-double RaisingAPowerB(double num1, int num2)
+double RaisingFirstToThePowerSecond(double num1, int num2)
 {
     double raising = 1;
     for (int i = 0; i < num2; i++)
@@ -24,6 +24,6 @@ int numberB = Convert.ToInt32(Console.ReadLine());
 if (numberB <= 0) Console.WriteLine("Некорректный ввод числа B");
 else
 {
-    double raising = RaisingAPowerB(numberA, numberB);
-    Console.WriteLine($"{numberA}^{numberB} = {raising}");
+    double raiseAToThePowerB = RaisingFirstToThePowerSecond(numberA, numberB);
+    Console.WriteLine($"{numberA}^{numberB} = {raiseAToThePowerB}");
 }
