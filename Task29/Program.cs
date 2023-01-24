@@ -16,16 +16,16 @@ int[] GenerateArray(int size, int min, int max)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length ; i++)
+    for (int i = 0; i < arr.Length - 1 ; i++)
     {
-        Console.Write($"{arr[i]} ," );
+        Console.Write($"{arr[i]}, " );
     }
-    Console.Write($"{arr[arr.Length - 1]} ");
+    Console.Write($"{arr[arr.Length - 1]}");
 }
 
-int[] arrayRandom = GenerateArray(8, 1, 100);
+int[] arrayRandom = GenerateArray(8, 1, 99);
 
 PrintArray(arrayRandom);
-Console.Write(" -> [ ");
+Console.Write(" -> [");
 PrintArray(arrayRandom);
 Console.Write("]");
