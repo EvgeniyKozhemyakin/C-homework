@@ -14,22 +14,18 @@ int[] GenerateArray(int size, int min, int max)
     }
     return arr;
 }
-
-void PrintArr(int[] arr)
+void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length - 1; i++)
+    for (int i = 0; i < arr.Length ; i++)
     {
-        Console.Write($"{arr[i]}, ");
+        Console.Write($"{arr[i]} ," );
     }
-    Console.Write($"{arr[arr.Length - 1]} -> [{arr[0]},  ");
-    for (int i = 1; i < arr.Length - 1; i++)
-    {
-        Console.Write($"{arr[i]}, ");
-    }
-    Console.Write($"{arr[arr.Length - 1]}]");
+    Console.Write($"{arr[arr.Length - 1]} ");
 }
 
+int[] arrayRandom = GenerateArray(8, 1, 100);
 
-int[] arrayRandom = GenerateArray(10, 0, 100);
-PrintArr(arrayRandom);
-
+PrintArray(arrayRandom);
+Console.Write(" -> [ ");
+PrintArray(arrayRandom);
+Console.Write("]");
