@@ -23,7 +23,7 @@ void PrintArray(int[] arr)
 int MaxElementsArray(int[] arr)
 {
     int max = 0;
-    for (int i = 1; i < arr.Length - 1; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
         if (arr[i] > arr[max]) max = i;
     }
@@ -32,7 +32,7 @@ int MaxElementsArray(int[] arr)
 int MinElementsArray(int[] arr)
 {
     int min = 0;
-    for (int i = 1; i < arr.Length - 1; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
         if (arr[i] < arr[min]) min = i;
     }
