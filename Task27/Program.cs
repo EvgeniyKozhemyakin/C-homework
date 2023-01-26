@@ -7,7 +7,7 @@ int SumDigits(int num)
 {
     int sum = 0;
     if (num < 0) num *= -1;
-    for (int i = 0; num!+0; i++)
+    for (int i = 0; num!= 0; i++)
     {
         sum += num % 10;
         num = num / 10;
