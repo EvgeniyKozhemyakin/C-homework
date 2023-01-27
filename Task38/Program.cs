@@ -1,26 +1,26 @@
-﻿// 38 Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-// [3 7 22 2 78] -> 76
-int[] GenerateArray(int size, int min, int max)
+﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
+double[] GenerateArray(int size, double min, double max)
 {
-    int[] arr = new int[size];
+    double[] arr = new double[size];
     Random rnd = new Random();
 
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        arr[i] = Math.Round((rnd.NextDouble() * (max - min) + min), 2);
     }
     return arr;
 }
-void PrintArray(int[] arr)
+void PrintArray(double[] arr)
 {
-    Console.Write($"[{arr[0]}, ");
-    for (int i = 1; i < arr.Length - 1; i++)
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{arr[i]}, ");
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}]");
     }
-    Console.Write($"{arr[arr.Length - 1]}]");
 }
-int MaxElementsArray(int[] arr)
+double MaxElementsArray(double[] arr)
 {
     int max = 0;
     for (int i = 1; i < arr.Length; i++)
@@ -29,7 +29,7 @@ int MaxElementsArray(int[] arr)
     }
     return arr[max];
 }
-int MinElementsArray(int[] arr)
+double MinElementsArray(double[] arr)
 {
     int min = 0;
     for (int i = 1; i < arr.Length; i++)
@@ -39,10 +39,10 @@ int MinElementsArray(int[] arr)
     return arr[min];
 }
 
-int[] array = GenerateArray(8, 0, 100);
-int maxElements = MaxElementsArray(array);
-int minElements = MinElementsArray(array);
-int diffBetweenMaxMin = maxElements - minElements ;
+double[] array = GenerateArray(8, 0, 100);
+double maxElements = MaxElementsArray(array);
+double minElements = MinElementsArray(array);
+double diffBetweenMaxMin = Math.Round(maxElements - minElements, 2) ;
 
 PrintArray(array);
 Console.Write($" -> Разница между макс и мин = {diffBetweenMaxMin}");
