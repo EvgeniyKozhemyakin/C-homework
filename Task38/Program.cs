@@ -42,7 +42,7 @@ double MinElementsArray(double[] arr)
 double[] array = GenerateArray(5, 0, 100);
 double maxElements = MaxElementsArray(array);
 double minElements = MinElementsArray(array);
-double diffBetweenMaxMin = Math.Round(maxElements - minElements, 2) ;
+double diffBetweenMaxMin = Math.Round(maxElements - minElements, 2);
 
 PrintArray(array);
 Console.Write($" -> Разница между макс и мин = {diffBetweenMaxMin}.");
