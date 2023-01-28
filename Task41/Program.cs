@@ -20,11 +20,14 @@ int QuantityNumbersGreaterZero(int[] array)
     }
     return quantity;
 }
-Console.WriteLine("Введите числа через пробел: ");
+
+Console.Write("Введите числа через пробел: ");
 int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-int quantityNumbersGreaterZer = QuantityNumbersGreaterZero(arr);
+
+int quantityNumbersGreaterZero = QuantityNumbersGreaterZero(arr);
 
 PrintArray(arr);
-Console.WriteLine($" -> {quantityNumbersGreaterZer}");
+Console.WriteLine($" -> {quantityNumbersGreaterZero} чисел больше 0 ");
+
 
 
