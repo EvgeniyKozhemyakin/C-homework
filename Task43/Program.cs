@@ -16,7 +16,6 @@ double x = (b2 - b1) / (k1 - k2);
 double y = (k2 * b1 - k1 * b2) / (k2 - k1);
 
 Console.WriteLine($"({x}; {y})");
-Console.WriteLine();
 
 
 
