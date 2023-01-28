@@ -27,7 +27,7 @@ int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 int quantityNumbersGreaterZero = QuantityNumbersGreaterZero(arr);
 
 PrintArray(arr);
-Console.WriteLine($" -> {quantityNumbersGreaterZero} чисел больше 0 ");
+Console.WriteLine($" -> {quantityNumbersGreaterZero}");
 
 
 
