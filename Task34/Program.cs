@@ -35,8 +35,8 @@ void PrintArray(int[] arr)
     Console.Write($"{arr[arr.Length - 1]}]");
 }
 
-int[] array = GenerateArray(4, 100, 999);
+int[] array = GenerateArray(4, 0, 10);
 int numberOfEvenNumbers = NumberOfEvenNumArray(array);
 
 PrintArray(array);
-Console.Write($" -> {numberOfEvenNumbers}");
+Console.Write($" -> Количество чётных чисел в массиве = {numberOfEvenNumbers}.");

@@ -39,13 +39,13 @@ double MinElementsArray(double[] arr)
     return arr[min];
 }
 
-double[] array = GenerateArray(8, 0, 100);
+double[] array = GenerateArray(5, 0, 100);
 double maxElements = MaxElementsArray(array);
 double minElements = MinElementsArray(array);
 double diffBetweenMaxMin = Math.Round(maxElements - minElements, 2) ;
 
 PrintArray(array);
-Console.Write($" -> Разница между макс и мин = {diffBetweenMaxMin}");
+Console.Write($" -> Разница между макс и мин = {diffBetweenMaxMin}.");
 
 
 

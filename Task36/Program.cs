@@ -34,10 +34,9 @@ int SumUnevenElement(int[] arr)
     return sum;
 }
 
-
 int[] array = GenerateArray(4, -100, 100);
 int sumUnevenElements = SumUnevenElement(array);
 
 PrintArray(array);
-Console.WriteLine($" -> Сумма нечетных = {sumUnevenElements}");
+Console.WriteLine($" -> Сумма элементов, стоящих на нечётных позициях = {sumUnevenElements}.");
 
