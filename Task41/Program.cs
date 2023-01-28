@@ -13,10 +13,10 @@ void PrintArray(int[] array)
 }
 int QuantityNumbersGreaterZero(int[] array)
 {
-    int quantity = 0 ; 
+    int quantity = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] > 0) quantity ++;
+        if (array[i] > 0) quantity++;
     }
     return quantity;
 }
