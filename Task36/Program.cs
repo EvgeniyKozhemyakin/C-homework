@@ -18,10 +18,10 @@ int[] GenerateArray(int size, int min, int max)
 void PrintArray(int[] arr)
 {
     Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
-        else Console.Write($"{array[i]}]");
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}]");
     }
 }
 int SumUnevenElement(int[] arr)
