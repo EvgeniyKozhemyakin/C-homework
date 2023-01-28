@@ -11,9 +11,20 @@ void PrintArray(int[] array)
         else Console.Write($"{array[i]}]");
     }
 }
+int QuantityNumbersGreaterZero(int[] array)
+{
+    int quantity = 0 ; 
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) quantity ++;
+    }
+    return quantity;
+}
+Console.WriteLine("Введите числа через пробел: ");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+int quantityNumbersGreaterZer = QuantityNumbersGreaterZero(arr);
 
-Console.WriteLine("Введите числа: ");
-int number = Convert.ToInt32(Console.ReadLine());
+PrintArray(arr);
+Console.WriteLine($" -> {quantityNumbersGreaterZer}");
 
-PrintArray(array);
 
