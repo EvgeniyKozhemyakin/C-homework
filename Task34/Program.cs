@@ -35,7 +35,7 @@ void PrintArray(int[] arr)
     Console.Write($"{arr[arr.Length - 1]}]");
 }
 
-int[] array = GenerateArray(4, 0, 10);
+int[] array = GenerateArray(4, 100, 999);
 int numberOfEvenNumbers = NumberOfEvenNumArray(array);
 
 PrintArray(array);
