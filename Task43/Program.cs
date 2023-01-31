@@ -22,6 +22,6 @@ double b2 = Convert.ToInt32(Console.ReadLine());
 
 double coordinateX = FunctionIntersectionCoordinateX(k1, k2, b1, b2);
 double coordinateY = FunctionIntersectionCoordinateY(k1, k2, b1, b2);
-Console.WriteLine($"[{coordinateX} ; {coordinateY}]");
+Console.WriteLine($"[{coordinateX}; {coordinateY}]");
 
 
