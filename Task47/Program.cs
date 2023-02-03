@@ -6,42 +6,32 @@
 
 
 
-double[,] GenerateArrayTwoDimensional(int row, int column, double min, double max)
+double[,] GenerateMatrixRndDouble(int rows, int columns, double min, double max)
 {
-    double[,] array = new double[row, column];
+    double[,] array = new double[rows, columns];
     Random rnd = new Random();
-    for (int i = 0; i < row; i++)
+
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < column; j++)
+        for (int j = 0; j < columns; j++)
         {
             array[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), 1);
         }
     }
     return array;
 }
-void PrintArr(double[,] array)
+void PrintMatrix(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
+        Console.Write("|");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (j == 0)
-            {
-                Console.Write($"[{array[i, j]}, ");
-            }
-            else if (j > 0 && j < array.GetLength(1) - 1)
-            {
-                Console.Write($"{array[i, j]}, ");
-            }
-            else
-            {
-                Console.Write($"{array[i, j]}] ");
-            }
-
+            if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j],5} |");
+            else Console.WriteLine($"{array[i, j],5} |");
         }
-        Console.WriteLine();
     }
 }
 
-double[,] arr = GenerateArrayTwoDimensional(3, 4, -10, 10);
-PrintArr(arr);
+double[,] matrix2d = GenerateMatrixRndDouble(3, 4, -9.4, 10);
+PrintMatrix(matrix2d);
