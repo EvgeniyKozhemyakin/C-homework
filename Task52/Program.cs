@@ -45,7 +45,7 @@ void PrintArray(double[] array)
     }
     Console.WriteLine("   |");
 }
-double[] GetArrayOfAverageValueSumElementsOfColumnsInMatrix(int[,] matrix)
+double[] ArrayAverageSumElementsColumnsMatrix(int[,] matrix)
 {
     double[] arrAverageValueOfSumElementsInMatrix = new double[matrix.GetLength(1)];
 
@@ -66,7 +66,7 @@ double[] GetArrayOfAverageValueSumElementsOfColumnsInMatrix(int[,] matrix)
 int[,] array2D = GreatMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(array2D);
 
-double[] arrayAverageValueSumElementsOfColumnsInMatrix = GetArrayOfAverageValueSumElementsOfColumnsInMatrix(array2D);
+double[] averageValueSumElementsColumnsMatrix = ArrayAverageSumElementsColumnsMatrix(array2D);
 
 Console.WriteLine("Среднее арифметическое столбца: ");
-PrintArray(arrayAverageValueSumElementsOfColumnsInMatrix);
+PrintArray(averageValueSumElementsColumnsMatrix);

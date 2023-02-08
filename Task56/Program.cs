@@ -65,20 +65,21 @@ int[] ArraySumElementsRow(int[,] matrix)
 }
 int[] RowsMinSumInMatrix(int[] arr)
 {   
-    int min = arr[0];
+    int min = arr[0];   
     for (int i = 1; i < arr.Length; i++)
     {
         if (min > arr[i]) min = arr[i];
+
     }
-    
-    int size = 0;
+
+    int sizeArr = 0;
     for (int i = 0; i < arr.Length; i++)
     {
         if (min == arr[i])
-            size++;
+            sizeArr++;
     }
-    int[] arrRowsSumMinElements = new int[size];
-
+    
+    int[] arrRowsSumMinElements = new int[sizeArr];
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
