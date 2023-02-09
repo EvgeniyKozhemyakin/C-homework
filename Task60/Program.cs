@@ -5,7 +5,7 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-int[,,] GreatMatrixRndInt(int rows, int columns, int depth, int min, int max)
+int[,,] GreatMatrixRndNotRepeating(int rows, int columns, int depth, int min, int max)
 {
     int[,,] matrix = new int[rows, columns, depth];
     int size = rows * columns * depth;
@@ -34,7 +34,7 @@ int[,,] GreatMatrixRndInt(int rows, int columns, int depth, int min, int max)
     int count = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        
+
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
@@ -63,5 +63,5 @@ void PrintMatrix3D(int[,,] matrix3d)
     }
 }
 
-int[,,] arr3D = GreatMatrixRndInt(2, 2, 2, 0, 100);
+int[,,] arr3D = GreatMatrixRndNotRepeating(2, 2, 2, 0, 100);
 PrintMatrix3D(arr3D);
