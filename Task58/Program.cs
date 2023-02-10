@@ -53,8 +53,8 @@ int[,] ProductOfTwoMatrix(int[,] matrixFirst, int[,] matrixSecond)
     return matrixProduct;
 }
 
-int[,] array2DFirst = GreatMatrixRndInt(2, 2, 0, 5);
-int[,] array2DSecond = GreatMatrixRndInt(2, 2, 0, 5);
+int[,] array2DFirst = GreatMatrixRndInt(3, 2, 0, 5);
+int[,] array2DSecond = GreatMatrixRndInt(2, 3, 0, 5);
 
 PrintMatrix(array2DFirst);
 PrintMatrix(array2DSecond);

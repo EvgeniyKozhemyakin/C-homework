@@ -63,5 +63,22 @@ void PrintMatrix3D(int[,,] matrix3d)
     }
 }
 
-int[,,] arr3D = GreatMatrixRndNotRepeating(2, 2, 2, 0, 100);
-PrintMatrix3D(arr3D);
+Console.WriteLine("Введите размер трехмерного массива и диапазон значений для заполнения ");
+Console.Write("Введите число строк :");
+int numberRows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число столбцов :");
+int numberColumns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите глубину массива :");
+int numberDepth = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальное значение в трехмерном массиве :");
+int minValueArr3D = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное значение в трехмерном массиве :");
+int maxValueArr3D = Convert.ToInt32(Console.ReadLine());
+
+if ((numberRows * numberColumns * numberDepth) > (maxValueArr3D - minValueArr3D))
+    Console.WriteLine("Невозможно выполнить трёхмерный массив из неповторяющихся двузначных чисел. Увеличьте число значений");
+ else
+{
+    int[,,] arr3D = GreatMatrixRndNotRepeating(numberRows, numberColumns, numberDepth, minValueArr3D, maxValueArr3D);
+    PrintMatrix3D(arr3D);
+}
