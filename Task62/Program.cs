@@ -6,38 +6,51 @@
 // 10 09 08 07
 
 
-int[,] GreatMatrixRndInt(int rows, int columns)
+int[,] GreatMatrixFilledSpirally(int rows, int columns)
 {
     int[,] matrix = new int[rows, columns];
-
-
+    int count = 1;
+    int maxValue = rows * columns;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        if (i == 0)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            if (i == 0)
             {
-                matrix[i, j] = j + 1;
+                matrix[i, j] = count;
+                count++;
+            }
+            if (i > 0 && i < matrix.GetLength(0) - 1 && j == matrix.GetLength(1) - 1)
+            {
+                matrix[i, j] = count;
+                count++;
+            }
+            if (i == matrix.GetLength(0) - 1 && j < matrix.GetLength(1) - 1)
+            {
+                matrix[i, matrix.GetLength(1) - 1 - j] = count;
+                count++;
             }
         }
-        if (i > 0)
-        {
-            matrix[i, matrix.GetLength(1) - 1] = matrix[i - 1, matrix.GetLength(1) - 1] + 1;
-            
-        }
-        if (i == matrix.GetLength(0) - 1)
-        {
-            for (int j = matrix.GetLength(1) - 1; j > 0; j--) // 5
-            {
-                matrix[i, j - 1] = matrix[i, j] + 1; //
-            }
-        }
-
-
 
     }
-
-
+    int m = matrix.GetLength(0) - 1;
+    while (m != 0)
+    {
+        matrix[m, 0] = count;
+        count++;
+        m--;
+    }
+    int k = 1;
+    int n = 1;
+    while (count <= maxValue)
+    {
+        matrix[k, n] = count;
+        if (matrix[k + 1, n] == 0 && matrix[k, n + 1] != 0) k++;
+        else if (matrix[k, n - 1] == 0 && matrix[k, n + 1] != 0) n--;
+        else if (matrix[k - 1, n] == 0 && matrix[k, n - 1] != 0) k--;
+        else n++;
+        count++;
+    }
     return matrix;
 }
 void PrintMatrix(int[,] matrix)
@@ -57,5 +70,5 @@ void PrintMatrix(int[,] matrix)
     Console.WriteLine();
 }
 
-int[,] array2D = GreatMatrixRndInt(6, 6);
+int[,] array2D = GreatMatrixFilledSpirally(4, 4);
 PrintMatrix(array2D);
