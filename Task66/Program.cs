@@ -6,7 +6,6 @@
 //5      //3
 int SumNaturalDigits(int num1, int num2)
 {
-
     if (num2 == num1) return num1;
     if (num2 < num1) return SumNaturalDigits(num2, num1);
     return num1 += SumNaturalDigits(num1 + 1, num2);
